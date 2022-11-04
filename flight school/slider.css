@@ -1,0 +1,132 @@
+    
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;
+    }
+    
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        display: flex;
+        /* clear: both; */
+
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      height: auto;
+      padding: 20px;
+      margin-top: -70px;
+      color: white;
+      font-weight: bolder;
+      font-size: 35px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+
+
+    /* .mySlides fade{
+      border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 10px 25px;
+    color: black;
+    background-color: #ddd;
+    text-align: center;
+    cursor: pointer; */
+
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: black;
+      font-size: x-large;
+      position: absolute;
+      font-family: normal;
+      font-weight: 700;
+      
+    }
+    .slider_butt{
+      background-color: rgba(0,0,0,0.5);
+      height: 3vw;
+      width: 10vw;
+      border: none;
+      font-size: 2vw;
+      position: absolute;
+      bottom: 50px;
+      left: 60px;
+      text-align: center;
+      border-radius: 20px;
+      color: cyan;
+      white-space: normal;
+    }
+
+    .slider_butt:hover{
+      background-color: rgba(0,0,0,0.8);
+      border-radius: 20px;
+    }
+
+    .text_slidebar{
+      color: black;
+      position: absolute;
+      top: 8px;
+      left: 16px;
+      font-family: normal;
+      font-weight: 700;
+      font-size: 2vw;
+      margin-right: 450px;
+    }
+    
+   
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+      -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+      filter: grayscale(100%);
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" box-sizing: border-box;>
+
+<head>
+    <link rel="icon" href="img/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- <img src="img/head.jpg" width="1350" height="320"> -->
+
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <header>
+        <title>Ukrainian school of higher piloting</title>
+        <link rel="stylesheet" href="style.css">
+
+        <div class="header_left_section">
+            <a href="index.html">Bayraktar - school of higher piloting </a>
+        </div>
+        <form class="menu_but">
+            <div>
+                <button class="button">About</button>
+                <button class="button">Programs</button>
+                <button class="button">Gallery</button>
+                <button class="button">Our team</button>
+                <button class="button">Contacts</button>
+            </div>
+        </form>
+    </header>
+
+
+    <form>
+        <link rel="stylesheet" href="slider.css">
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="img/slider1.jpg" style="width:100%">
+                <div><button class="slider_butt">about</button></div>
+                <div class="text_slidebar">For more than 10 years, our school has been producing highly qualified aces
+                    who are able to work in advanced airlines.....</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/slider2.jpg" style="width:100%">
+                <div></div>
+                <div><button class="slider_butt">Programs</button></div>
+                <div class="text_slidebar">For more than 10 years, our school has been producing highly qualified aces
+                    who are able to work in advanced airlines.....</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/slider3.jpg" style="width:100%">
+                <div><button class="slider_butt">Gallery</button></div>
+                <div class="text_slidebar">For more than 10 years, our school has been producing highly qualified aces
+                    who are able to work in advanced airlines.....</div>
+
+
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/slider4.png" style="width:100%">
+                <div class="text_slidebar">For more than 10 years, our school has been producing highly qualified aces
+                    who are able to work in advanced airlines.....</div>
+
+                <div><button class="slider_butt">Our Team</button></div>
+
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/mriya1.jpg" style="width:100%">
+                <div class="text_slidebar">Якщо твоя мрія в небі, то залиш заявку, і ми тобі обов'язково передзвонимо
+                </div>
+                <div><button class="slider_butt">Contacts</button></div>
+
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+        <script>
+
+            let slideIndex = 1;
+            showSlides(slideIndex);
+
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+
+            }
+
+        </script>
+    </form>
+
+
+
+    <section class="about" id="about">
+        <h2 class="hidden">About our school</h2>
+        <p class="text_column">1Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. </p>
+        <p class="text_column">2Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. </p>
+        <p class="text_column">3Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse cillum dolore eu fugiat nulla pariatur. </p>
+    </section>
+
+    <div class="gallery">
+        <div class="thumbnail">
+            <h1 class="stats">5</h1>
+            <h4>літаків</h4>
+            <p>готових до польоту завжди</p>
+        </div>
+
+        <div class="thumbnail">
+            <h1 class="stats">5</h1>
+            <h4>асів</h4>
+            <p>з великим досвідом</p>
+        </div>
+
+        <div class="thumbnail">
+            <h1 class="stats">215</h1>
+            <h4>пілотів</h4>
+            <p>підготувала наша школа</p>
+        </div>
+
+        <div class="thumbnail">
+            <h1 class="stats">9870</h1>
+            <h4>годин</h4>
+            <p>в небі провели наші студенти</p>
+        </div>
+    </div>
+
+
+    <div class="gallery">
+        <h1>TRAINING PROGRAMS</h1>
+    </div>
+
+    <div class="row">
+        <div class="progr_column">
+            <div class="progr_card">
+                <img src="img/cessna172_2.jpg" alt="Cessna" style="width:100%">
+                <div class="container">
+                    <h2>PPL One-engine AirCraft Training</h2>
+                    <p class="progr_name">172</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>example@example.com</p>
+                    <button class="progr_butt" onclick="openForm()">Contact</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="progr_column">
+            <div class="progr_card">
+                <img src="img/cessna172.jpg" alt="Mike" style="width:100%">
+                <div class="container">
+                    <h2>PPL AirCraft ReTraining</h2>
+                    <p class="progr_name">Art Director</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>example@example.com</p>
+                    <button class="progr_butt" onclick="openForm()">Contact</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="progr_column">
+            <div class="progr_card">
+                <img src="img/cessna172_2.jpg" alt="Cessna" style="width:100%">
+                <div class="container">
+                    <h2>PPL One-engine AirCraft Training</h2>
+                    <p class="progr_name">172</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>example@example.com</p>
+                    <button class="progr_butt" onclick="openForm()">Contact</button>
+                </div>
+            </div>
+        </div>
+        <div class="progr_column">
+            <div class="progr_card">
+                <img src="img/piper.jpg" alt="John" style="width:100%">
+                <div class="container">
+                    <h2>PPL Two-engine AirCraft Training</h2>
+                    <p class="progr_name">Piper</p>
+                    <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                    <p>example@example.com</p>
+                    <button class="progr_butt" onclick="openForm()">Contact</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+
+    <!--Image box-->
+    <div class="img_row">
+        <div class="img_column">
+            <img src="img/cessna172.jpg">
+            <img src="img/gallery3.jpg">
+
+        </div>
+        <div class="img_column">
+            <img src="img/gallery2.jpeg">
+            <img src="img/cessna172_2.jpg">
+
+
+        </div>
+        <div class="img_column">
+            <img src="img/gallery4.jpg">
+            <img src="img/piper.jpg">
+        </div>
+        <div class="img_column">
+            <img src="img/slider1.jpg">
+            <img src="img/slider2.jpg">
+            <img src="img/gallery1.jpeg">
+
+        </div>
+    </div>
+
+
+    <!--Our Team-->
+    <div class="team">
+        <div class="card">
+            <img src="img/avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/avatar.png" alt="Avatar" style="width:100%">
+            <div class="container">
+                <h4><b>John Doe</b></h4>
+                <p>Architect & Engineer</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <h1>Login</h1>
+
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter Name" name="name" required>
+
+            <label for="phone"><b>Number phone</b></label>
+            <input type="tel" placeholder="Enter number" name="phone" required>
+
+            <button type="submit" class="btn">Call me</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+
+
+
+</body>
+<footer class="footer">
+
+    <div class="footer_name"><a href="index.html">Bayraktar - school of higher piloting </a></div>
+
+    <div class="contact">
+        <p>Our contact:</p>
+        <div class="align_contact">
+            <p> email:</p>
+            <a href="mailto:example@example.com" class="contact_link">example@example.com</a>
+            <p>phone number:</p>
+            <p><a href="tell:+38 096 394 7949" class="contact_link">+38(012)34-56-789</a></p>
+        </div>
+    </div>
+
+    <div class="dno">
+        <div class="social_text">Our social links: </div>
+        <div>
+            <a href="https://www.instagram.com/"> <img src="img/insta.png" alt="inst" class="social_link"></a>
+            <a href="https://www.facebook.com/"> <img src="img/fb.png" alt="fb" class="social_link"></a>
+            <a href="https://twitter.com/"> <img src="img/twitter.png" alt="twitter" class="social_link"></a>
+            <a href="https://www.messenger.com/"> <img src="img/messenger.png" alt="messenger" class="social_link"></a>
+        </div>
+    </div>
+
+
+</footer>
+
+</html>
